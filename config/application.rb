@@ -44,5 +44,19 @@ module ContactRails31
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "dev.jenimech.com",
+      :user_name            => "your-email-address",
+      :password             => "your-password",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+
+    config.action_mailer.default_url_options = {
+      :host => "dev.jenimech.com"
+    }
   end
 end
